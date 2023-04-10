@@ -57,7 +57,7 @@ def display_prices_ma(symbol, start_date, end_date, interval, short_window, long
         # Show plot in Streamlit app
         st.plotly_chart(fig)
         return data
-    except ValueError as e:
+    except ValueError as e: #todo need to catch more exceptions
         if interval == "1m":
             st.warning("For 1 minute interval only 7 days worth of data can be used")
         elif interval == "5m":
